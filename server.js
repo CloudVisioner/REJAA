@@ -2,13 +2,22 @@ console.log('Web Serverni Boshlash');
 const express = require('express');
 const app = express();
 const http = require('http');
+const fs = require('fs');
 
-
+let user;
+fs.readFile("database/user.json", "utf-8", (err, data) => {
+    if(err) {
+        console.log("ERROR", err);
+    } else {
+        user = JSON.parse(data)
+    }
+})
 
 //1 Kirish
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 //2 Session
 
@@ -25,6 +34,11 @@ app.post("/create-item", (req, res) => {
 app.get("/hello", function(req, res) {
     res.end(`<h1 style="background: yellowgreen">Hello World by Azamat</h1>`);
 })
+
+app.get("/portfolio", (req, res) => {
+    res.render("portfolio", { user: user });
+
+});
 
 app.get("/", function(req, res) {
     res.render("harid");
