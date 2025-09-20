@@ -1,82 +1,211 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
-    <title>Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+  <title>Portfolio</title>
 </head>
 
 <body>
-    <div class="frame">
-        <div class="main_frame">
-            <div class="left_frame">
-                <div class="left_1">
-                    <div class="left_1-1">
-                        <img src="images/Profile.png" width="156px" height="142px" alt="" />
-                    </div>
-                    <div class="left_1-2">
-                        <%=user.name%>
-                    </div>
-                    <div class="left_1-3">
-                        <%=user.profession%>
-                    </div>
-                    <div class="left-icons">
-                        <a class="link_href" href="">
-                            <div class="icon">
-                                <img src="btn_icon/Dribbble.svg" class="icon-1">
-                            </div>
-                        </a>
+  <div class="frame">
+    <div class="main_frame">
 
-                        <a class="link_href" href="">
-                            <div class="icon">
-                                <img src="btn_icon/Facebook.svg" class="icon-1">
-                            </div>
-                        </a>
+      <!-- LEFT FRAME -->
+      <div class="left_frame">
 
-                        <a class="link_href" href="">
-                            <div class="icon">
-                                <img src="btn_icon/Instagram.svg" class="icon-1">
-                            </div>
-                        </a>
-
-                        <a class="link_href" href="">
-                            <div class="icon">
-                                <img src="btn_icon/Linkeding.svg" class="icon-1">
-                            </div>
-                        </a>
-
-                        <a class="link_href" href="">
-                            <div class="icon">
-                                <img src="btn_icon/Twitter.svg" class="icon-1">
-                            </div>
-                        </a>
-
-                        <a class="link_href" href="">
-                            <div class="icon">
-                                <img src="btn_icon/Youtube.svg" class="icon-1">
-                            </div>
-                        </a>
-
-                    </div>
-                </div>
-                <dvi class="marginer"></dvi>
-                <div class="left_2"></div>
-                <dvi class="marginer"></dvi>
-                <div class="left_3"></div>
-                <dvi class="marginer"></dvi>
-                <div class="left_4"></div>
-                <dvi class="marginer"></dvi>
-                <div class="left_5"></div>
-                <dvi class="marginer"></dvi>
-
-            </div>
-            <div class="midd_frame"></div>
-            <div class="right_frame"></div>
+        <!-- Profile -->
+        <div class="left_1">
+          <div class="left_1-1">
+            <img src="images/Profile.png" width="156px" height="142px" alt="" />
+          </div>
+          <div class="left_1-2">
+            <%=user.name%>
+          </div>
+          <div class="left_1-3">
+            <%=user.profession%>
+          </div>
+          <div class="left-icons">
+            <a class="link_href" href=""><img src="btn_icon/Dribbble.svg" class="icon-1"></a>
+            <a class="link_href" href=""><img src="btn_icon/Facebook.svg" class="icon-1"></a>
+            <a class="link_href" href=""><img src="btn_icon/Instagram.svg" class="icon-1"></a>
+            <a class="link_href" href=""><img src="btn_icon/Linkeding.svg" class="icon-1"></a>
+            <a class="link_href" href=""><img src="btn_icon/Twitter.svg" class="icon-1"></a>
+            <a class="link_href" href=""><img src="btn_icon/Youtube.svg" class="icon-1"></a>
+          </div>
         </div>
+
+        <div class="marginer"></div>
+
+        <!-- Info -->
+        <div class="left_2">
+          <div class="info-list">
+            <div class="info-item"><span class="label">Age:</span> <span class="value">24</span></div>
+            <div class="info-item"><span class="label">Recidence:</span> <span class="value">BD</span></div>
+            <div class="info-item"><span class="label">Freelance:</span> <span class="value available">Available</span>
+            </div>
+            <div class="info-item"><span class="label">Address:</span> <span class="value1">Dhaka Bangladesh</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="marginer"></div>
+
+        <!-- Languages -->
+        <div class="left_3">
+          <div class="languages">
+            <h3>Languages</h3>
+            <div class="lang-item"><span class="lang-name">Bangla</span><span class="lang-percent">100%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 100%;"></div>
+              </div>
+            </div>
+            <div class="lang-item"><span class="lang-name">English</span><span class="lang-percent">80%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%;"></div>
+              </div>
+            </div>
+            <div class="lang-item"><span class="lang-name">Spanish</span><span class="lang-percent">60%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 60%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marginer"></div>
+
+        <!-- Skills -->
+        <div class="left_4">
+          <div class="skills">
+            <h3>Skills</h3>
+            <div class="skill-item"><span class="skill-name">Html</span><span class="skill-percent">90%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 90%;"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">CSS</span><span class="skill-percent">85%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">Js</span><span class="skill-percent">80%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 80%;"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">PHP</span><span class="skill-percent">75%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 75%;"></div>
+              </div>
+            </div>
+            <div class="skill-item"><span class="skill-name">WordPress</span><span class="skill-percent">85%</span>
+              <div class="progress">
+                <div class="progress-bar" style="width: 85%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="marginer"></div>
+
+        <!-- Extra Skills -->
+        <div class="left_5">
+          <div class="extra-skills">
+            <h3>Extra Skills</h3>
+            <ul>
+              <li><span class="skill-icon"></span> Bootstrap, Materialize</li>
+              <li><span class="skill-icon"></span> Stylus, Sass, Less</li>
+              <li><span class="skill-icon"></span> Gulp, Webpack, Grunt</li>
+              <li><span class="skill-icon"></span> GIT Knowledge</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="marginer"></div>
+
+      </div>
+      <!-- END LEFT FRAME -->
+
+      <!-- MIDDLE FRAME -->
+      <div class="midd_frame">
+
+
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-left">
+            <h1>Doctor neurologists in OHSU Hospital</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat.</p>
+            <button class="btn">Hire Me -></button>
+          </div>
+          <div class="hero-right">
+            <img src="btn_icon/jel.svg" width="326.055px" height="400px" alt="Doctor Image" />
+          </div>
+        </section>
+
+        <!-- My Services Section -->
+        <section class="services">
+          <h2>My Services</h2>
+          <p>Amet Minim Mollit Non Deserunt Ullamco Est...</p>
+
+          <div class="service-grid">
+            <div class="service-card">
+              <img src="btn_icon/coding.svg" alt="">
+              <h3>Web Development</h3>
+              <p>Blog, E-Commerce</p>
+            </div>
+            <div class="service-card">
+              <img src="btn_icon/illustration.svg" alt="">
+              <h3>UI/UX Design</h3>
+              <p>Mobile App, Website Design</p>
+            </div>
+            <div class="service-card">
+              <img src="btn_icon/Microphone.svg" alt="">
+              <h3>Sound Design</h3>
+              <p>Voice Over, Beat Making</p>
+            </div>
+            <div class="service-card">
+              <img src="btn_icon/game-development.svg" alt="">
+              <h3>Game Design</h3>
+              <p>Character Design, Props & Objects</p>
+            </div>
+            <div class="service-card">
+              <img src="btn_icon/Photographer.svg" alt="">
+              <h3>Photography</h3>
+              <p>Portrait, Product Photography</p>
+            </div>
+            <div class="service-card">
+              <h3>Advertising</h3>
+              <p>Lorem Ipsum Dolor Sit Amet...</p>
+              <br>
+              <p style="color: var(--Yellow, #FFB400);">ORDER NOW -></p>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!-- END MIDDLE FRAME -->
+
+      <!-- RIGHT FRAME -->
+      <div class="right_frame">
+        <div class="icon-bt"><img src="btn_icon/Contrast.svg" alt="Contrast"></div>
+        <a class="icon-btnnn">Home</a>
+        <a href="#" class="icon-btnn"><img src="btn_icon/Union.svg" alt="Union"></a>
+        <a href="#" class="icon-btn active"><img src="btn_icon/Home.svg" alt="Home"></a>
+        <a href="#" class="icon-btn"><img src="btn_icon/Blog.svg" alt="Blog"></a>
+        <a href="#" class="icon-btn"><img src="btn_icon/Contact.svg" alt="Contact"></a>
+        <a href="#" class="icon-btn"><img src="btn_icon/cv.svg" alt="CV"></a>
+        <a href="#" class="icon-btn"><img src="btn_icon/file-code.svg" alt="File Code"></a>
+      </div>
+      <!-- END RIGHT FRAME -->
+
     </div>
+
+  </div>
+
 </body>
 
 </html>
