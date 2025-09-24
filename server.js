@@ -13,9 +13,9 @@ fs.readFile("database/user.json", "utf-8", (err, data) => {
     }
 })
 
-//1 Kirish
-app.use(express.static('public'));
-app.use(express.json());
+//1 Kirish/ MIDDLEWARE
+app.use(express.static('public')); // DP  public ochiqlaydi
+app.use(express.json()); // Midleware DP -> Rest API 
 app.use(express.urlencoded({ extended: true }));
 
 
@@ -34,19 +34,20 @@ app.post("/create-item", (req, res) => {
 app.get("/hello", function(req, res) {
     res.end(`<h1 style="background: yellowgreen">Hello World by Azamat</h1>`);
 })
-
+console.log("A");
 app.get("/portfolio", (req, res) => {
+    console.log("B");
     res.render("portfolio", { user: user });
-
 });
+console.log("C");
 
 app.get("/", function(req, res) {
-    res.render("harid");
+    res.render("reja");
 })
 
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function() {
-    console.log(`The server is running sucessfully on portal: ${PORT}`);
+    console.log(`The server is running sucessfully on portal: ${PORT} http://localhost:${PORT}`);
 })
 
