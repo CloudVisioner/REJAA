@@ -1,12 +1,30 @@
-console.log("Jack Ma maslahatlari");
-const list = [
-  "yaxshi talaba bo'ling", // 0 - 20
-  "to'g'ri bohsliq tanlang va koproq xato qiling", // 20 - 30
-  "ozingizga ishlashni boshlang", // 30 - 40
-  "siz kuchli bolgan narsalarni qiling", // 40 - 50
-  "yoshlarga investitsiya qiling", // 50 - 60
-  "dam oling, foydasi yoq endi", //60
-];
+// Task B
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+//
+function countDigits(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(str[i]) && str[i] !== " ") { 
+      count++;
+    }
+  }
+  return count;
+}
+
+
+console.log(countDigits("sdfha123b4u4nfnj434jf")); 
+
+
+
+// console.log("Jack Ma maslahatlari");
+// const list = [
+//   "yaxshi talaba bo'ling", // 0 - 20
+//   "to'g'ri bohsliq tanlang va koproq xato qiling", // 20 - 30
+//   "ozingizga ishlashni boshlang", // 30 - 40
+//   "siz kuchli bolgan narsalarni qiling", // 40 - 50
+//   "yoshlarga investitsiya qiling", // 50 - 60
+//   "dam oling, foydasi yoq endi", //60
+// ];
 // // CALLBACK FUNCTION
 // function maslahatBering(a, callback) {
 //   if (typeof a !== 'number') callback("insert a number", null);
@@ -77,29 +95,29 @@ async function maslahatBering(a, callback) {
   }
 }
 // CALL VIA then() && catch() callbacks
-  console.log("passed here 0");
-  maslahatBering(25).then(data => {
-    console.log('javob', data);
+//   console.log("passed here 0");
+//   maslahatBering(25).then(data => {
+//     console.log('javob', data);
 
-  }).catch(err => {
-    console.log('ERROR', err); // //Sync function lar ishga tushib bolgandan keyingina Async functionlari ishga tushadi.
+//   }).catch(err => {
+//     console.log('ERROR', err); // //Sync function lar ishga tushib bolgandan keyingina Async functionlari ishga tushadi.
 
-  })
+//   })
 
- console.log("passed here 0");
-// async/await
-async function run() {
-  let javob = await maslahatBering(25);
-  console.log(javob);
-  javob = await maslahatBering(110);
-  console.log(javob);
-  javob = await SweetmaslahatBering(33);
-  console.log(javob);
-}
+//  console.log("passed here 0");
+// // async/await
+// async function run() {
+//   let javob = await maslahatBering(25);
+//   console.log(javob);
+//   javob = await maslahatBering(110);
+//   console.log(javob);
+//   javob = await SweetmaslahatBering(33);
+//   console.log(javob);
+// }
 
-run();
+// run();
 
-console.log("passed here 1");
+// console.log("passed here 1");
 
 // Async single thread ni band qilmaydigan function hisoblanadi.
 
