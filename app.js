@@ -5,6 +5,7 @@ const fs = require('fs');
 
 // Mongo DB choqirish
 const db = require('./server').db(); 
+const mongodb = require('mongodb');
 
 
 
@@ -31,6 +32,13 @@ app.post("/create-item", (req, res) => {
 
     });
 });
+
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne({_id: new mongodb.ObjectId(id)}, function(err, data) {
+        res.json({state: "success" })
+    })
+})
 
 app.get("/hello", function(req, res) {
     res.end(`<h1 style="background: yellowgreen">Hello World by Azamat</h1>`);
