@@ -12,7 +12,7 @@ function countDigits(str) {
 }
 
 
-console.log(countDigits("sdfha123b4u4nfnj434jf")); 
+console.log(countDigits("sdfha123bsdfaf324523467ew3wfsdf4u4nfnj434jf")); 
 
 
 
