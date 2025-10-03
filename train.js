@@ -1,25 +1,35 @@
+//  E-TASK: 
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function getReverse(word) {
+  return word.split('').reverse().join('');
+} 
+console.log(getReverse("done reverse"))
+
 // TASK D : 
 
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function checkContent(word, word_2) {
+// function checkContent(word, word_2) {
 
   
-  if (word.length !== word_2.length) {
-    return false;
-    }
-    word = word.toLowerCase();
-    word_2 = word_2.toLowerCase();
-    let h = word.split("").sort().join("");
-    let b = word_2.split("").sort().join("");
+//   if (word.length !== word_2.length) {
+//     return false;
+//     }
+//     word = word.toLowerCase();
+//     word_2 = word_2.toLowerCase();
+//     let h = word.split("").sort().join("");
+//     let b = word_2.split("").sort().join("");
 
-  if( h === b) {
-    return true;
-  }
-}
-console.log(checkContent('Marcus', "sucraM"));
+//   if( h === b) {
+//     return true;
+//   }
+// }
+// console.log(checkContent('Marcus', "sucraM"));
 
 // MITASK-C 
 

@@ -58,13 +58,15 @@ document.addEventListener("click", function (e) { // Whenever the user clicks an
 
 
     // edit operations
-    if (e.target.classList.contains("edit-me")) {
-        let userInput = prompt("O'zgartirish kiriting.", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    if (e.target.classList.contains("edit-me")) { // if clicks
+        let userInput = prompt("O'zgartirish kiriting.", e.target.parentElement.parentElement.querySelector(".item-text").innerHTML // appers a pop-up for typing with a chosen text shown
         );
-        if(userInput) {
-            axios.post("/edit-item", { id: e.target.getAttribute("data-id"), new_input: userInput,})
-            .then(response => { 
-                console.log(response.data);
+        if(userInput) { // When a user tries to change the text
+            axios.post("/edit-item", // server address
+                { id: e.target.getAttribute("data-id"), // takes the value from the button's data-id 
+                new_input: userInput,}) // updated text from the prompt
+            .then(response => { // backend response coming
+                console.log(response.data); 
                 e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
 
                
@@ -80,9 +82,9 @@ document.addEventListener("click", function (e) { // Whenever the user clicks an
 });
 
 document.getElementById('clean-all').addEventListener('click', function() {
-    axios.post("/delete-all", {delete_all: true})
+    axios.post("/delete-all", {delete_all: true}) // delete_all is a static code (magic - keyword)
     .then(response => {
-        alert(response.data.state)
-        document.location.reload()
+        alert(response.data.state) // state is just the key we made in the backend
+        document.location.reload() // refreshes the page so the user can see the updated package
     });
  });

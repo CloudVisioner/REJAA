@@ -11,7 +11,7 @@ const mongodb = require('mongodb');
 //1 Kirish/ MIDDLEWARE
 app.use(express.static('public')); // DP  public ochiqlaydi
 app.use(express.json()); // Midleware DP -> Rest API 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // Traditional API
 
 
 //2 Session
@@ -42,7 +42,7 @@ app.post("/delete-item", (req, res) => {
     })
 })
 
-app.post("/edit-item", (req, res) => {
+app.post("/edit-item", (req, res) => { // req is coming from browser.js (front-end)
     const data = req.body;
     console.log(data);
     db.collection("plans").findOneAndUpdate(
