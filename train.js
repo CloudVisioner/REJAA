@@ -1,12 +1,42 @@
+// TASK-F
+
+// Yagona string argumentga ega findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
+// MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+
+
+function findDoublers(word) {
+  let notebook = {}
+
+  for(let letter of word) { // for each letter inside the word
+    if(notebook[letter]) { // if it notebook already contains that letter
+      return true; // return true
+    }
+    else {
+       notebook[letter] = true; // otherwise write it down, and continiou looping (searching)
+    }
+  }
+   return false; // if searching finishes, no duplicat then -> false
+}
+
+console.log(findDoublers("MIT"))
+
+// {} -> curly braces for objects
+// [] -> square brackets for arrays
+// () -> parenthese for function and conditions
+
 //  E-TASK: 
 
 // Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 // MASALAN: getReverse("hello") return qilsin "olleh"
 
-function getReverse(word) {
-  return word.split('').reverse().join('');
-} 
-console.log(getReverse("done reverse"))
+// function getReverse(word) {
+//   return word.split('').reverse().join('');
+// } 
+// console.log(getReverse("done reverse"))
 
 // TASK D : 
 
@@ -229,3 +259,5 @@ console.log(getReverse("done reverse"))
 // }
 
 // console.log(countLetter("a", "australia"));
+
+
